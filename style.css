@@ -1,0 +1,39 @@
+/*
+ Theme Name:   Second NU Branding SoC IT / NU Global Branding
+ Theme URI:    http://www.northwestern.edu/brand
+ Description:  Second Design. Closer to NUGM. Less extensions. Extends NU Global Branding theme first created by Alex Miner in Academic Research and Technology.
+ Author:       Richard for SoCIT
+ Author URI:   http://communication.northwestern.edu
+ Template:     northwestern-global-marketing-wordpress-theme
+*/
+
+
+/* Make bg white */
+body #nu,
+body nav#top-nav  {
+    background-color: white;
+}
+
+
+/* PUrple bar size*/
+body #nu #top-bar {
+    height: 40px;
+    max-height: 40px;
+    min-height: 40px;
+}
+
+/* WHite space size*/
+body #nu .bottom-bar #department {
+    height: 70px;
+}
+
+/* Hide Main NU Logo */
+body #nu #top-bar #left img {
+    visibility: hidden;
+}
+
+
+/* Footer Color */
+body footer {
+    background-color: #444444;
+}
