@@ -8,6 +8,7 @@
 */
 
 
+
 /* Make bg white */
 body #nu,
 body nav#top-nav  {
@@ -18,11 +19,14 @@ body nav#top-nav  {
 /* PUrple bar size*/
 body #nu #top-bar {
     height: 40px;
-    max-height: 40px;
     min-height: 40px;
 }
 
 /* WHite space size*/
+body #nu .bottom-bar {
+    clear: both;
+    float: none;
+}
 body #nu .bottom-bar #department {
     height: 70px;
 }
@@ -34,6 +38,18 @@ body #nu #top-bar #left img {
 
 
 /* Footer Color */
-body footer {
-    background-color: #444444;
+/*!*body footer {*/
+    /*background-color: #444444;*/
+/*}*!*/
+
+
+/*
+/* colorized search icon */
+body #mobile-nav-link {
+    background-image: url('/wp-content/themes/soc_nu-child/img/hamburger_purple.png');
+}
+
+/* purple search icon */
+#mobile-links .mobile-search-link {
+    background-image: url('/wp-content/themes/soc_nu-child/img/search_purple.png');
 }
