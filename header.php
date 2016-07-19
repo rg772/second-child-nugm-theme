@@ -54,11 +54,11 @@
                 </div>-->
                 <div id ="right">
                     <ul id="purple_school_menu">
-                        <li>School of Communication</li>
-                        <li>About</li>
-                        <li>News</li>
-                        <li>Support</li>
-                        <li>Contact</li>
+                        <li><a href="http://communication.northwestern.edu">School of Communication</a></li>
+                        <li><a href="http://www.communication.northwestern.edu/learn">About</a></li>
+                        <li><a href="http://www.communication.northwestern.edu/news">News</a></li>
+                        <li><a href="http://www.communication.northwestern.edu/support">Support</a></li>
+                        <li><a href="http://www.communication.northwestern.edu/contact">Contact</a></li>
                     </ul>
                 </div>
             </div>
