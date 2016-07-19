@@ -53,3 +53,14 @@ body #mobile-nav-link {
 #mobile-links .mobile-search-link {
     background-image: url('/wp-content/themes/soc_nu-child/img/search_purple.png');
 }
+
+
+/* Purple Menu */
+body #top-bar #right {
+    margin-top: 13px;
+}
+body #purple_school_menu li a
+{
+    font-family: 'Akkurat Pro Regular',Arial,sans-serif !important;
+    font-size: 10pt;
+}

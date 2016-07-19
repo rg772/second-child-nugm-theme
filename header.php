@@ -48,9 +48,18 @@
     <div id="mini">
         <div id="top-bar">
             <div class="contain-1120 group">
-                <div id="left"><a href="http://www.northwestern.edu/"><img
-                            src="<?php echo get_template_directory_uri(); ?>/library/images/northwestern.svg"
+                <!--<div id="left"><a href="http://www.northwestern.edu/"><img
+                            src="<?php /*echo get_template_directory_uri(); */?>/library/images/northwestern.svg"
                             alt="Northwestern University"><span class="hide-label">Northwestern University</span></a>
+                </div>-->
+                <div id ="right">
+                    <ul id="purple_school_menu">
+                        <li>School of Communication</li>
+                        <li>About</li>
+                        <li>News</li>
+                        <li>Support</li>
+                        <li>Contact</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -134,7 +143,11 @@
     </div>
 </nav>
 
-<?php require_once('hero.php'); ?>
+
+<?php require_once(get_template_directory()  . '/hero.php'); ?>
+
+
+
 
 <div id="page" <?php if (is_fullwidth()): ?>class="contain-1440"<?php endif; ?>>
     <?php if (is_fullwidth()): ?>
