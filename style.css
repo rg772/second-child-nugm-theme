@@ -38,9 +38,9 @@ body #nu #top-bar #left img {
 
 
 /* Footer Color */
-/*!*body footer {*/
-    /*background-color: #444444;*/
-/*}*!*/
+body footer {
+    background-color: #444444;
+}
 
 
 /*
