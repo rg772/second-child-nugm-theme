@@ -16,3 +16,17 @@ function nugm_soc_theme_enqueue_styles()
 
 
 }
+
+
+
+/* Add standard-page class to everything except homepage. Thanks to Alex Miner */
+add_filter( 'body_class', 'nu_gm_nuamps_child_body_classes', 11 );
+function nu_gm_nuamps_child_body_classes( $classes ) {
+
+
+   if ( !is_front_page() && $key = array_search('landing-page', $classes) ) {
+        $classes[] = 'standard-page';
+    }
+
+    return $classes;
+}
