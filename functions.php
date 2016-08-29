@@ -7,7 +7,6 @@
  */
 
 
-
 add_action('wp_enqueue_scripts', 'nugm_soc_theme_enqueue_styles');
 function nugm_soc_theme_enqueue_styles()
 {
