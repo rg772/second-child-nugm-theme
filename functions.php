@@ -53,7 +53,6 @@ add_action('after_setup_theme', function() {
 
     // does it have items
     $current_menu_items = wp_get_nav_menu_items($menu_name_slug);
-    d($current_menu_items);
     if (count($current_menu_items) == 0) {
 
         foreach($soc_menu_array as $soc_menu_item) {
@@ -70,7 +69,6 @@ add_action('after_setup_theme', function() {
 
     }
 
-    // debug menu object
-    d($menu_object);
+
 
 });
