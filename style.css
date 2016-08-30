@@ -72,3 +72,8 @@ body #purple_school_menu li a
         border: 10px solid transparent;
     }
 }
+
+/* Search form text color  */
+body form input#q {
+    color: grey !important;
+}
