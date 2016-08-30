@@ -67,6 +67,8 @@ body #purple_school_menu li a
 
 
 /* Space around main content. Really seen with responsive or narrow views */
-#main-content {
-    border: 10px solid transparent;
+@media (max-width: 401px) {
+    #main-content {
+        border: 10px solid transparent;
+    }
 }
