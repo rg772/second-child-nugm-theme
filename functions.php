@@ -27,17 +27,25 @@ add_filter( 'body_class', function ( $classes ) {
 
 
 /*
- *
+ * Enforce SoC Menu in this theme. Decided to go with a dynamic menu to remove need
+ * to hand make this menu in each site.
  */
 
 add_action('after_setup_theme', function() {
 
+    // Menu name as used in parent theme
     $menu_name_slug = 'menu-upper-nav';
+
+    // menu location name as used in the NUGM
     $menu_location_name = 'upper-nav';
+
+    // theme mod key name
     $theme_mod_name = 'nav_menu_locations';
+
+    // array of SoC STandard Items
     $soc_menu_array = ['', 'about', 'news', 'support', 'contact'];
 
-
+    // Get the menu if it exists
     $menu_object = wp_get_nav_menu_object($menu_name_slug);
 
     // if menu doesn't exist create it
