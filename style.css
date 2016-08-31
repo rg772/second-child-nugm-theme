@@ -77,3 +77,13 @@ body #purple_school_menu li a
 body form input#q {
     color: grey !important;
 }
+
+
+/* Fix Photo features */
+.contain-1120 .feature-two-col article {
+    margin: 3px !important;
+}
+.photo-feature-3-across article {
+    float: left;
+    width: 31%;
+}
