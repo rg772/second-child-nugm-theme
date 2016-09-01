@@ -83,6 +83,10 @@ body form input#q {
 .contain-1120 .feature-two-col article {
     margin: 3px !important;
 }
+.photo-feature-3-across {
+    clear: both;
+    float
+}
 .photo-feature-3-across article {
     float: left;
     width: 31%;
