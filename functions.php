@@ -10,7 +10,8 @@
 add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('parent-style', get_template_directory_uri() . '/style.css');
     wp_enqueue_style('nugm_soc_style', get_stylesheet_directory_uri() . '/style.css');
-    wp_enqueue_script('soc_nugm_force_search_action',  get_stylesheet_directory_uri()  . '/soc_gmnu_force_search_action.js', false);
+    wp_enqueue_script("jquery");
+    wp_enqueue_script('soc_nugm_force_search_action',  get_stylesheet_directory_uri()  . '/soc_gmnu_force_search_action.js', true);
 });
 
 
@@ -28,7 +29,6 @@ add_filter( 'body_class', function ( $classes ) {
  * Enforce SoC Menu in this theme. Decided to go with a dynamic menu to remove need
  * to hand make this menu in each site.
  */
-
 add_action('after_setup_theme', function() {
 
     // Menu name as used in parent theme
@@ -76,5 +76,26 @@ add_action('after_setup_theme', function() {
     }
 
 
+
+});
+
+
+add_action('widgets_init', function() {
+    register_sidebar([
+        'name'          => 'Template Footer Widget Left',
+        'id'            => 'template_left',
+        'before_widget' => '<div>',
+        'after_widget'  => '</div>',
+        'before_title'  => '<strong>',
+        'after_title'   => '</strong>',
+    ]);
+    register_sidebar([
+        'name'          => 'Template Footer Widget Left Center',
+        'id'            => 'template_left_center',
+        'before_widget' => '<div>',
+        'after_widget'  => '</div>',
+        'before_title'  => '<strong>',
+        'after_title'   => '</strong>',
+    ]);
 
 });
