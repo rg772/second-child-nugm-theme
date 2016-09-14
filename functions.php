@@ -12,6 +12,7 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('nugm_soc_style', get_stylesheet_directory_uri() . '/style.css');
     wp_enqueue_script("jquery");
     wp_enqueue_script('soc_nugm_force_search_action',  get_stylesheet_directory_uri()  . '/soc_gmnu_force_search_action.js', true);
+    wp_enqueue_script('nu-forgotten-script', get_stylesheet_directory_uri() . '/nu-scripts.js', true);
 });
 
 
@@ -98,4 +99,26 @@ add_action('widgets_init', function() {
         'after_title'   => '</strong>',
     ]);
 
+});
+
+
+/*
+ * Try to curb TinyMCE's from messing too much with
+ */
+
+add_filter('tiny_mce_before_init', function( $init ) {
+    // html elements being stripped
+    $init['extended_valid_elements'] = 'div[*], article[*]';
+
+    // don't remove line breaks
+    $init['remove_linebreaks'] = false;
+
+    // convert newline characters to BR
+    $init['convert_newlines_to_brs'] = false;
+
+    // don't remove redundant BR
+    $init['remove_redundant_brs'] = false;
+
+    // pass back to wordpress
+    return $init;
 });
