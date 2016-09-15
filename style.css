@@ -91,3 +91,18 @@ body form input#q {
     float: left;
     width: 31%;
 }
+
+
+/*
+STATS CALL OUT
+*/
+.stats-callout {
+    display: table;
+    width: 100%;
+}
+.stats-callout div {
+    display: table-cell;
+}
+.center-list {
+    text-align: center;
+}
