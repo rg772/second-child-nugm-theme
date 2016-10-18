@@ -108,7 +108,3 @@ STATS CALL OUT
 }
 
 
-/* Fix tinymce size while editing*/
-body#tinymce {
-    font: 100%/1.7em "Akkurat Pro Regular",Arial,sans-serif !important;
-}

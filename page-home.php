@@ -21,6 +21,6 @@
 
 	include($page_full_template);
   ?>
-
-<?php get_footer(); ?>
+TEST
+<?php // get_footer(); ?>
 
