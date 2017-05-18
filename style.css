@@ -7,6 +7,21 @@
  Template:     northwestern-global-marketing-wordpress-theme
 */
 
+/* Class to sticky the top. THis class is added via other mechanisms */
+.fixed_to_top_admin {
+    position: fixed;
+    width:100%;
+    top: 32px;
+    z-index: 999999;
+}
+
+.fixed_to_top {
+    position: fixed;
+    width:100%;
+    top: 0px;
+    z-index: 999999;
+}
+
 
 
 /* Make bg white */
@@ -106,5 +121,3 @@ STATS CALL OUT
 .center-list {
     text-align: center;
 }
-
-
