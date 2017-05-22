@@ -62,7 +62,7 @@ add_action('customize_register', function ($wp_customize) {
     );
       $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'soc_use_sticky_menu',
       array(
-        'label' => 'Use narrow-branding menus',
+        'label' => 'Use sticky menus',
         'description'=> $soc_sticky_additional_desc,
         'section' => 'SOC',
         'type' => 'checkbox',
