@@ -9,6 +9,7 @@
 add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('parent-style', get_template_directory_uri() . '/style.css');
     wp_enqueue_style('nugm_soc_style', get_stylesheet_directory_uri() . '/style.css');
+    wp_enqueue_style('res_tabs', get_stylesheet_directory_uri() . '/_rt.css');
     wp_enqueue_script("jquery");
     wp_enqueue_script('soc_nugm_force_search_action', get_stylesheet_directory_uri()  . '/soc_gmnu_force_search_action.js', true);
     // wp_enqueue_script('nu-forgotten-script', get_stylesheet_directory_uri() . '/nu-scripts.js', true);
