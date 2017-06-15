@@ -120,4 +120,4 @@ add_filter('tiny_mce_before_init', function ($init) {
 /*
 * Require Theme options and actions
 */
-require_once(dir(__FILE__) . 'soc_theme_options_and_actions.php');
+require_once('soc_theme_options_and_actions.php');
