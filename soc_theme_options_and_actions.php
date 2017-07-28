@@ -38,6 +38,21 @@ add_filter('wp_kses_allowed_html', function ($allowed, $context) {
 }, 10, 2);
 
 
+// Theme option: Hide admin bar. If checked in settings, this will
+// load the user and see if they belong to the subscriber role. If 
+// they do, show_admin_bar will be used to set a false value. 
+add_action('after_setup_theme', function () {
+
+  if (get_theme_mod('soc_hide_adminbar_subscriber', FALSE)) {
+
+    $user = wp_get_current_user();
+    if (in_array('subscriber', (array) $user->roles)) {
+      show_admin_bar(FALSE);
+    }
+  }
+});
+
+
 /*
 * Add SoC options
 */
@@ -94,4 +109,16 @@ add_action('customize_register', function ($wp_customize) {
 		'type' => 'checkbox',
 		'settings' => 'soc_kses_override',
 	]));
+  
+  // kses override
+  $wp_customize->add_setting('soc_hide_adminbar_subscriber', [
+    'default' => FALSE,
+    'sanitize_callback' => 'nu_gm_sanitize_checkbox',
+  ]);
+  $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'soc_hide_adminbar_subscriber', [
+    'label' => 'Hide admin tool bar from Subscriber role',
+    'section' => 'SOC',
+    'type' => 'checkbox',
+    'settings' => 'soc_hide_adminbar_subscriber',
+  ]));
 });
