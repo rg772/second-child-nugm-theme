@@ -38,19 +38,34 @@ add_filter('wp_kses_allowed_html', function ($allowed, $context) {
 }, 10, 2);
 
 
-// Theme option: Hide admin bar. If checked in settings, this will
-// load the user and see if they belong to the subscriber role. If 
-// they do, show_admin_bar will be used to set a false value. 
+/*
+ * after_setup_theme
+ *
+ * This action, gets the users current roles and executes an array
+ * intersect to see if the user is a member of the top classes:
+ * 'administrator', 'editor', 'author'. If not, the admin bar is
+ * set to false.
+ */
 add_action('after_setup_theme', function () {
 
   if (get_theme_mod('soc_hide_adminbar_subscriber', FALSE)) {
-
+    
     $user = wp_get_current_user();
+    // print_r($user->roles);
+    
+    $role_intersection = array_intersect($user->roles, [
+      'administrator', 'editor', 'author',
+    ]);
+    
     if (in_array('subscriber', (array) $user->roles)) {
       show_admin_bar(FALSE);
     }
+    
+    if (count($role_intersection) == 0) {
+      show_admin_bar(FALSE);
+    }
   }
-});
+}, 99);
 
 
 /*
