@@ -49,6 +49,8 @@ body #nu .bottom-bar #department {
 /* Hide Main NU Logo */
 body #nu #top-bar #left img {
     visibility: hidden;
+    left: -999px;
+    position: absolute;
 }
 
 
@@ -120,4 +122,12 @@ STATS CALL OUT
 }
 .center-list {
     text-align: center;
+}
+
+
+/*
+SEARCH BUTTON CORRECTION
+*/
+body #search .search-form button {
+    background-image: url('img/search.svg');
 }
