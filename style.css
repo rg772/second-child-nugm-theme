@@ -77,6 +77,11 @@ body #mobile-nav-link {
     background-size: 20px 20px !important;
 }
 
+.mobile-link.mobile-nav-link.open {
+    background: #fff url(//common.northwestern.edu/v8/css/images/icons/close-button-dkpurple.svg) no-repeat center !important;
+    background-size: 20px 20px !important;
+}
+
 
 /* Purple Menu */
 body #top-bar #right {
