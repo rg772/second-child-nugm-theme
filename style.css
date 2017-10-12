@@ -71,6 +71,12 @@ body #mobile-nav-link {
     background-image: url('/wp-content/themes/second-child-nugm-theme/img/search_purple.png');
 }
 
+/* white X on mobile menu */
+.mobile-link.mobile-search-link.open {
+    background: #4e2a84 url(//common.northwestern.edu/v8/css/images/icons/alert-x-white-home.svg) no-repeat center !important;
+    background-size: 20px 20px !important;
+
+
 
 /* Purple Menu */
 body #top-bar #right {
