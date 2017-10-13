@@ -19,6 +19,11 @@ add_action('wp_enqueue_scripts', function () {
 	if (get_theme_mod('soc_use_sticky_menu', FALSE)) {
 		wp_enqueue_script('soc_sticky_menu', get_stylesheet_directory_uri() . '/soc_stickymenu.js', TRUE);
 	}
+
+
+	if (get_theme_mod('soc_grey_bar_on_menu', FALSE)) {
+		wp_enqueue_style('menu_grey_bar_on_menu', get_stylesheet_directory_uri() . '/css/menu_grey_bar_on_menu.css');
+	}
 });
 
 
@@ -135,5 +140,20 @@ add_action('customize_register', function ($wp_customize) {
     'section' => 'SOC',
     'type' => 'checkbox',
     'settings' => 'soc_hide_adminbar_subscriber',
-  ]));
+	]));
+	
+
+	// grey bars on menu
+	$wp_customize->add_setting('soc_grey_bar_on_menu', [
+    'default' => FALSE,
+    'sanitize_callback' => 'nu_gm_sanitize_checkbox',
+  ]);
+  $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'soc_grey_bar_on_menu', [
+    'label' => 'Put grey bars on the menu',
+    'section' => 'SOC',
+    'type' => 'checkbox',
+    'settings' => 'soc_grey_bar_on_menu',
+	]));
+
+
 });
