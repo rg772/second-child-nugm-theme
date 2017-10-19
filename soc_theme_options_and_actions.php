@@ -13,8 +13,11 @@ add_filter('nu_gm_top_nav_classes', function ($classes) {
 	}
 });
 
-// Theme Option: soc_use_sticky_menu
-// loads 
+// ENQUEUE
+// -> Sticky Menu
+// -> Gray Bars
+// -> Trailing Menu highlights
+// loads CSS or JS files to enhance functionality
 add_action('wp_enqueue_scripts', function () {
 	if (get_theme_mod('soc_use_sticky_menu', FALSE)) {
 		wp_enqueue_script('soc_sticky_menu', get_stylesheet_directory_uri() . '/soc_stickymenu.js', TRUE);
@@ -24,6 +27,11 @@ add_action('wp_enqueue_scripts', function () {
 	if (get_theme_mod('soc_grey_bar_on_menu', FALSE)) {
 		wp_enqueue_style('menu_grey_bar_on_menu', get_stylesheet_directory_uri() . '/css/menu_grey_bar_on_menu.css');
 	}
+	
+	
+	if (get_theme_mod('soc_trailing_menu_css', FALSE)) {
+	  wp_enqueue_style('soc_trailing_menu_css', get_stylesheet_directory_uri() . '/css/trailing_menu_item.css');
+  }
 });
 
 
@@ -154,6 +162,17 @@ add_action('customize_register', function ($wp_customize) {
     'type' => 'checkbox',
     'settings' => 'soc_grey_bar_on_menu',
 	]));
-
-
+  
+  // trailing menu
+  // grey bars on menu
+  $wp_customize->add_setting('soc_trailing_menu_css', [
+    'default' => FALSE,
+    'sanitize_callback' => 'nu_gm_sanitize_checkbox',
+  ]);
+  $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'soc_trailing_menu_css', [
+    'label' => 'Add trailing menu CSS coloring',
+    'section' => 'SOC',
+    'type' => 'checkbox',
+    'settings' => 'soc_trailing_menu_css',
+  ]));
 });
