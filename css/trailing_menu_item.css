@@ -1,0 +1,6 @@
+/* TRAILING MENU HIGHLIGHT */
+body #top-nav-inner .current-menu-parent,
+body #top-nav-inner > .current-menu-item {
+  background: lightgray;
+}
+
