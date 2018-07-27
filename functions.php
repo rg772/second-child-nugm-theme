@@ -11,20 +11,17 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('nugm_soc_style', get_stylesheet_directory_uri() . '/style.css');
     wp_enqueue_style('res_tabs', get_stylesheet_directory_uri() . '/_rt.css');
     wp_enqueue_script("jquery");
-    wp_enqueue_script('soc_nugm_force_search_action', get_stylesheet_directory_uri()  . '/soc_gmnu_force_search_action.js', true);
+    wp_enqueue_script('soc_nugm_force_search_action', get_stylesheet_directory_uri() . '/soc_gmnu_force_search_action.js', true);
     // wp_enqueue_script('nu-forgotten-script', get_stylesheet_directory_uri() . '/nu-scripts.js', true);
 });
 
-
-
 /* Add standard-page class to everything except homepage. Thanks to Alex Miner */
-add_filter( 'body_class', function ($classes) {
+add_filter('body_class', function ($classes) {
     if (!is_front_page() && $key = array_search('landing-page', $classes)) {
         $classes[] = 'standard-page';
     }
     return $classes;
-}, 11 );
-
+}, 11);
 
 /*
  * Enforce SoC Menu in this theme. Decided to go with a dynamic menu to remove need
@@ -65,32 +62,31 @@ add_action('after_setup_theme', function () {
             $menu_item_title = strtoupper(($soc_menu_item == '') ? 'home' : $soc_menu_item);
             $menu_item_url = $soc_menu_item;
             wp_update_nav_menu_item($menu_object->term_id, 0, [
-                'menu-item-title' =>  __($menu_item_title),
+                'menu-item-title' => __($menu_item_title),
                 'menu-item-classes' => 'home',
                 'menu-item-url' => 'http://communication.northwestern.edu/' . $menu_item_url,
-                'menu-item-status' => 'publish'
+                'menu-item-status' => 'publish',
             ]);
         }
     }
 });
 
-
 add_action('widgets_init', function () {
     register_sidebar([
-        'name'          => 'Template Footer Widget Left',
-        'id'            => 'template_left',
+        'name' => 'Template Footer Widget Left',
+        'id' => 'template_left',
         'before_widget' => '<div>',
-        'after_widget'  => '</div>',
-        'before_title'  => '<strong>',
-        'after_title'   => '</strong>',
+        'after_widget' => '</div>',
+        'before_title' => '<strong>',
+        'after_title' => '</strong>',
     ]);
     register_sidebar([
-        'name'          => 'Template Footer Widget Left Center',
-        'id'            => 'template_left_center',
+        'name' => 'Template Footer Widget Left Center',
+        'id' => 'template_left_center',
         'before_widget' => '<div>',
-        'after_widget'  => '</div>',
-        'before_title'  => '<strong>',
-        'after_title'   => '</strong>',
+        'after_widget' => '</div>',
+        'before_title' => '<strong>',
+        'after_title' => '</strong>',
     ]);
 });
 
@@ -115,9 +111,61 @@ add_filter('tiny_mce_before_init', function ($init) {
     return $init;
 });
 
+/**
+ * Text Changeroo
+ * 
+ * This is an applied filter of gettext. It string overrides no content warnings coming from archive-nu_gm_*.php 
+ * pages. 
+ */
+function soc_text_strings_changer_roo($translated_text, $text, $domain)
+{
+    $uri = $_SERVER['REQUEST_URI'];
+    
+    // events
+    if (strpos($uri, '/events') === 0) {
+        $name_helper = 'Events';
+        $icon_helper = "&#128197;"; // 128197 calendar
+    } 
+    
+    // /projects
+    elseif (strpos($uri, '/projects') === 0) {
+        $name_helper = 'Projects';
+        $icon_helper = "&#128220;"; // &#128220; = scroll
+    }
 
+    // directory/
+    elseif (strpos($uri, '/directory') === 0) {
+        $name_helper = 'Directory';
+        $icon_helper = "&#128566;"; // &#128566; = face
+    }
+
+    // other
+    else {
+        $name_helper = "";
+        $icon_helper = "&#128195;"; // &#128195;= curled paper
+
+    }
+
+    switch ($translated_text) {
+        case 'Oops, Post Not Found!':
+            $translated_text = __("$name_helper", 'soc');
+            break;
+
+        case 'Uh Oh. Something is missing. Try double checking things.':
+            $translated_text = __("There appears to be no $name_helper at this time", 'soc');
+            break;
+
+        case 'This is the error message in the archive.php template.':
+            $translated_text = __("<!-- This is the error message in the archive.php template. -->", 'soc');
+            break;
+            
+    }
+    return $translated_text;
+}
+ add_filter('gettext', 'soc_text_strings_changer_roo', 2000, 3);
 
 /*
-* Require Theme options and actions
-*/
-require_once('soc_theme_options_and_actions.php');
+ * Require Theme options and actions
+ */
+require_once 'soc_theme_options_and_actions.php';
+
