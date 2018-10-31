@@ -113,33 +113,27 @@ add_filter('tiny_mce_before_init', function ($init) {
 
 /**
  * Text Changeroo
- * 
- * This is an applied filter of gettext. It string overrides no content warnings coming from archive-nu_gm_*.php 
- * pages. 
+ *
+ * This is an applied filter of gettext. It string overrides no content warnings coming from archive-nu_gm_*.php
+ * pages.
  */
 function soc_text_strings_changer_roo($translated_text, $text, $domain)
 {
     $uri = $_SERVER['REQUEST_URI'];
-    
+
     // events
     if (strpos($uri, '/events') === 0) {
         $name_helper = 'Events';
         $icon_helper = "&#128197;"; // 128197 calendar
-    } 
-    
-    // /projects
+    } // /projects
     elseif (strpos($uri, '/projects') === 0) {
         $name_helper = 'Projects';
         $icon_helper = "&#128220;"; // &#128220; = scroll
-    }
-
-    // directory/
+    } // directory/
     elseif (strpos($uri, '/directory') === 0) {
         $name_helper = 'Directory';
         $icon_helper = "&#128566;"; // &#128566; = face
-    }
-
-    // other
+    } // other
     else {
         $name_helper = "";
         $icon_helper = "&#128195;"; // &#128195;= curled paper
@@ -158,11 +152,47 @@ function soc_text_strings_changer_roo($translated_text, $text, $domain)
         case 'This is the error message in the archive.php template.':
             $translated_text = __("<!-- This is the error message in the archive.php template. -->", 'soc');
             break;
-            
+
     }
     return $translated_text;
 }
- add_filter('gettext', 'soc_text_strings_changer_roo', 2000, 3);
+
+add_filter('gettext', 'soc_text_strings_changer_roo', 2000, 3);
+
+
+/**
+ * Function rewrites choices for post type. Only executes if "soc_customizer_override" is set to true
+ * (checked in the customizer itself.
+ *
+ * @param WP_Customize_Manager $wp_customize
+ */
+function soc_customizer(WP_Customize_Manager $wp_customize)
+{
+
+
+    $wp_customize->add_control(
+        new WP_Customize_Control(
+            $wp_customize,
+            'post_list_format',
+            array(
+                'label' => 'Display Format of Posts in Lists',
+                'section' => 'post_format',
+                'type' => 'radio',
+                'choices' => array(
+                    'standard' => __('Textual Preview', 'nu_gm'),
+                    'feature-box' => __('Feature Box', 'nu_gm'),
+                    'photo-feature' => __('Photo Feature', 'nu_gm'),
+                    'news-listing' => __('Just use News', 'nu_gm')
+                ),
+                'settings' => 'post_list_format_setting',
+            )
+        )
+    );
+
+}
+
+add_action('customize_register', 'soc_customizer', 9000001);
+
 
 /*
  * Require Theme options and actions
