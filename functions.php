@@ -161,7 +161,7 @@ add_filter('gettext', 'soc_text_strings_changer_roo', 2000, 3);
 
 
 /**
- * Function rewrites choices for post type. Only executes if "soc_customizer_override" is set to true
+ * Function rewrites choices for post type. Only executes if "soc_`custom`izer_override" is set to true
  * (checked in the customizer itself.
  *
  * @param WP_Customize_Manager $wp_customize
@@ -183,7 +183,7 @@ function soc_customizer(WP_Customize_Manager $wp_customize)
                     'feature-box' => __('Feature Box', 'nu_gm'),
                     'photo-feature' => __('Photo Feature', 'nu_gm'),
                     'news-listing' => __('Just use News', 'nu_gm'),
-                    'soc-news-listing'=>__('5th option', 'nu_gm')
+                    'soc-news-listing'=>__('5th option / SoC Specific', 'nu_gm')
                 ),
                 'settings' => 'post_list_format_setting',
             )
