@@ -1,7 +1,7 @@
 <article id="post-<?php the_ID(); ?>" aria-labelledby="post-<?php the_ID(); ?>-title" class="news" itemscope itemid="#post-<?php the_ID(); ?>" itemprop="itemListElement" itemtype="<?php echo nu_gm_schema(); ?>" itemref="footer-publisher-info">
 
     <div itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
-    [Debug: 5th option - SOC]
+
     <?php if( has_post_thumbnail() ): ?>
       <?php the_post_thumbnail('news-listing', array('itemprop' => 'url')); ?>
     <?php else: ?>
