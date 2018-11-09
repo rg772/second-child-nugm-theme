@@ -182,7 +182,8 @@ function soc_customizer(WP_Customize_Manager $wp_customize)
                     'standard' => __('Textual Preview', 'nu_gm'),
                     'feature-box' => __('Feature Box', 'nu_gm'),
                     'photo-feature' => __('Photo Feature', 'nu_gm'),
-                    'news-listing' => __('Just use News', 'nu_gm')
+                    'news-listing' => __('Just use News', 'nu_gm'),
+                    'soc-news-listing'=>__('5th option', 'nu_gm')
                 ),
                 'settings' => 'post_list_format_setting',
             )
