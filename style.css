@@ -7,6 +7,14 @@
  Template:     northwestern-global-marketing-wordpress-theme
 */
 
+
+/* 
+Fix font awesome 
+*/
+body .content i.fa {
+    font-family: FontAwesome;
+}
+
 /* Class to sticky the top. THis class is added via other mechanisms */
 .fixed_to_top_admin {
     position: fixed;
