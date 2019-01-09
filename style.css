@@ -9,7 +9,7 @@
 
 
 /* 
-Fix font awesome 
+Fix font awesome on the client side
 */
 body .content i.fa {
     font-family: FontAwesome;
