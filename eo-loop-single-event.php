@@ -19,6 +19,13 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> itemscope itemtype="http://schema.org/Event">
 
 	<div class="eo-event-header entry-header">
+		
+		<div class="eo-event-date">
+			<?php
+				//Formats the start & end date of the event
+				echo eo_format_event_occurrence();
+			?>
+		</div>
 
 		<h3 class="eo-event-title entry-title">
 			<a href="<?php echo eo_get_permalink(); ?>" itemprop="url">
@@ -26,12 +33,7 @@
 			</a>
 		</h3>
 
-		<div class="eo-event-date">
-			<?php
-				//Formats the start & end date of the event
-				echo eo_format_event_occurrence();
-			?>
-		</div>
+		
 
 	</div><!-- .entry-header -->
 

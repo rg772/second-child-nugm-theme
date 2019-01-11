@@ -48,7 +48,7 @@ get_header(); ?>
 				<?php the_content(); ?>
 			</div><!-- .entry-content -->
 
-			<div class=entry-meta">
+			<div class="entry-meta soc-entry-meta">
 			<?php
 			//Events have their own 'event-category' taxonomy. Get list of categories this event is in.
 			$categories_list = get_the_term_list( get_the_ID(), 'event-category', '', ', ','' );
