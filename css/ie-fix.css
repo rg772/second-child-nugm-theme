@@ -1,0 +1,15 @@
+/*****************
+EDGE/IE menu fix
+******************/
+@supports (-ms-ime-align:auto) {
+	#top-nav ul li:hover .dropdown {
+        position: absolute !important;
+        left: 0 !important;
+	}
+}
+@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) { 
+#top-nav ul li:hover .dropdown {
+        position: absolute !important;
+        left: 0 !important;
+	}
+}

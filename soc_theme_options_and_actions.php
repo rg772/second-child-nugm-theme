@@ -16,6 +16,7 @@ add_filter('nu_gm_top_nav_classes', function ($classes) {
 // -> Sticky Menu
 // -> Gray Bars
 // -> Trailing Menu highlights
+// -> IE/Edge Issue fix (default is true)
 // loads CSS or JS files to enhance functionality
 add_action('wp_enqueue_scripts', function () {
     if (get_theme_mod('soc_use_sticky_menu', FALSE)) {
@@ -31,6 +32,11 @@ add_action('wp_enqueue_scripts', function () {
     if (get_theme_mod('soc_trailing_menu_css', FALSE)) {
         wp_enqueue_style('soc_trailing_menu_css', get_stylesheet_directory_uri() . '/css/trailing_menu_item.css');
     }
+
+    if (get_theme_mod('soc_ie_fix', TRUE)) {
+        wp_enqueue_style('soc_ie_fix', get_stylesheet_directory_uri() . '/css/ie-fix.css');
+    }
+
 });
 
 
@@ -163,7 +169,6 @@ add_action('customize_register', function ($wp_customize) {
     ]));
 
     // trailing menu
-    // grey bars on menu
     $wp_customize->add_setting('soc_trailing_menu_css', [
         'default' => FALSE,
         'sanitize_callback' => 'nu_gm_sanitize_checkbox',
@@ -173,6 +178,19 @@ add_action('customize_register', function ($wp_customize) {
         'section' => 'SOC',
         'type' => 'checkbox',
         'settings' => 'soc_trailing_menu_css',
+    ]));
+
+
+    // IE Fix
+    $wp_customize->add_setting('soc_ie_fix', [
+        'default' => TRUE,
+        'sanitize_callback' => 'nu_gm_sanitize_checkbox',
+    ]);
+    $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'soc_ie_fix', [
+        'label' => 'Use CSS to fix drop down menus in IE/Edge',
+        'section' => 'SOC',
+        'type' => 'checkbox',
+        'settings' => 'soc_ie_fix',
     ]));
 
 
