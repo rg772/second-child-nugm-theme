@@ -23,10 +23,20 @@
     </h4>
     <div class="news-date">
         <time class="updated entry-time" datetime="<?php echo get_the_time('Y-m-d'); ?>"
-              itemprop="datePublished"><?php echo get_the_time(get_option('date_format')); ?></time>
+              itemprop="datePublished"><?php echo get_the_time(get_option('date_format')); ?></time> 
+            
     </div>
-    <div class="news-description" itemprop="description"><?php echo gm_custom_excerpt(140); ?></div>
+    <div class="news-description" itemprop="description">
+        <?php echo gm_custom_excerpt(120); ?>
+    </div>
+
+    <div class="news-description">
+    <a href="<?php the_permalink(); ?>" > <?php echo get_theme_mod('soc_readmore_optional_text_override') ?></a>
+    </div>
+   
     <link itemprop="url mainEntityOfPage" href="<?php the_permalink() ?>"/>
+
+    
     <span itemprop="author" itemscope itemtype="http://schema.org/Person" hidden style="display:none;">
     <meta itemprop="url mainEntityOfPage" content="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>"
           hidden/>
@@ -36,6 +46,7 @@
             <meta itemprop="givenName" content="<?php echo $first_name; ?>" hidden /><?php endif; ?>
         <?php if ($last_name == get_the_author_meta('last_name')): ?>
             <meta itemprop="familyName" content="<?php echo $last_name; ?>" hidden /><?php endif; ?>
+
   </span>
     <meta itemprop="dateModified" content="<?php echo the_modified_time('Y-m-d'); ?>" hidden/>
     <?php echo nu_gm_get_the_loop_index(); ?>

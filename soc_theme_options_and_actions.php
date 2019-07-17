@@ -193,6 +193,30 @@ add_action('customize_register', function ($wp_customize) {
         'settings' => 'soc_ie_fix',
     ]));
 
+    // Read More Optional Text override 
+    $wp_customize->add_setting( 'soc_readmore_optional_text_override' , array(
+        'default' => 'Read More',
+        'type' => 'theme_mod',
+        'sanitize_callback' => 'soc_readmore_optional_text_override_sanitize',
+    ) );
+    $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'soc_readmore_optional_text_override', [
+        'label' => __( 'Read More Optional Text override (SoC News) ', 'soc' ),
+        'type' => 'text',
+        'section' => 'post_format',
+        'settings'=>'soc_readmore_optional_text_override',
+    ]));
+
+   
 
 
 });
+
+
+
+/**
+ * Sanitization function for text input. 
+ */
+function soc_readmore_optional_text_override_sanitize($input) {
+    return filter_var($input, FILTER_SANITIZE_STRING);
+}
+
