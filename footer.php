@@ -16,7 +16,8 @@
             $social_media_account_url = get_theme_mod($social_media_setting_key, '');
             if (!empty($social_media_account_url)) {
                 $social_media_urls[] = $social_media_account_url;
-                $social_media_output .= '<a class="social ' . $key . '" href="' . $social_media_account_url . '" itemprop="sameAs"></a>';
+                $social_media_output .= '<a class="social ' . $key . '" href="' . $social_media_account_url . '" itemprop="sameAs">"';
+                $social_media_output .= "<span class='hide-label'>$key</span></a>";
             }
         }
         $organization = (object)[
