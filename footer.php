@@ -92,7 +92,9 @@
         </div>
         <div class="footer-content">
             <p><strong>Social Media</strong></p>
-            <a class="social rss" href="<?php bloginfo('rss2_url'); ?>"></a>
+            <a class="social rss" href="<?php bloginfo('rss2_url'); ?>">
+                <span class='hide-label'>RSS Feed</span></a>
+            </a>
             <?= $social_media_output ?>
         </div>
         <div class="footer-content">
