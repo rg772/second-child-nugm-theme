@@ -7,12 +7,29 @@
  */
 
 add_action('wp_enqueue_scripts', function () {
+
+
+    /*
+     * Use our own version of this CSS file. Explicitly cancel it from
+     * going into the CSS and inject the local copy.
+     */
+    wp_dequeue_style('nu_gm-styles');
+    wp_deregister_script('nu_gm-styles');
+    wp_enqueue_style('nu_gm-styles', get_stylesheet_directory_uri() . '/library/css/gm-styles.css');
+
+    /*
+     * Font definitions coming from media.soc
+     */
+    wp_enqueue_style('nugm_soc_fonts', get_stylesheet_directory_uri() . '/fonts.css');
+
     wp_enqueue_style('parent-style', get_template_directory_uri() . '/style.css');
     wp_enqueue_style('nugm_soc_style', get_stylesheet_directory_uri() . '/style.css');
     wp_enqueue_style('res_tabs', get_stylesheet_directory_uri() . '/_rt.css');
     wp_enqueue_script("jquery");
     wp_enqueue_script('soc_nugm_force_search_action', get_stylesheet_directory_uri() . '/soc_gmnu_force_search_action.js', true);
     // wp_enqueue_script('nu-forgotten-script', get_stylesheet_directory_uri() . '/nu-scripts.js', true);
+
+
 });
 
 /* Add standard-page class to everything except homepage. Thanks to Alex Miner */
@@ -183,7 +200,7 @@ function soc_customizer(WP_Customize_Manager $wp_customize)
                     'feature-box' => __('Feature Box', 'nu_gm'),
                     'photo-feature' => __('Photo Feature', 'nu_gm'),
                     'news-listing' => __('Just use News', 'nu_gm'),
-                    'soc-news-listing'=>__('5th option / SoC Specific', 'nu_gm')
+                    'soc-news-listing' => __('5th option / SoC Specific', 'nu_gm')
                 ),
                 'settings' => 'post_list_format_setting',
             )
