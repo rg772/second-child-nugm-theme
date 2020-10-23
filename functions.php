@@ -19,8 +19,9 @@ add_action('wp_enqueue_scripts', function () {
 
     /*
      * Font definitions coming from media.soc
+     * Moving to header.php and using rel=preload
      */
-    wp_enqueue_style('nugm_soc_fonts', get_stylesheet_directory_uri() . '/fonts.css');
+    // wp_enqueue_style('nugm_soc_fonts', get_stylesheet_directory_uri() . '/fonts.css');
 
     wp_enqueue_style('parent-style', get_template_directory_uri() . '/style.css');
     wp_enqueue_style('nugm_soc_style', get_stylesheet_directory_uri() . '/style.css');
