@@ -49,8 +49,20 @@
     <?php // end of wordpress head ?>
 
     <!-- Call preloaded fonts file   -->
-    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/fonts.css" >
+    <!--    <link rel="stylesheet" href="--><?php //echo get_stylesheet_directory_uri(); ?><!--/fonts.css" >-->
 
+    <style type="text/css" media="all" >
+        @font-face{font-family:"Akkurat Pro Light";src:url("https://media.soc.northwestern.edu/common/fonts/AkkuratProLight.woff") format("woff");font-weight:normal;font-style:normal}
+        @font-face{font-family:"Akkurat Pro Light Italic";src:url("https://media.soc.northwestern.edu/common/fonts/AkkuratProLightItalic.woff") format("woff");font-weight:normal;font-style:normal}
+        @font-face{font-family:"Akkurat Pro Regular";src:url("https://media.soc.northwestern.edu/common/fonts/AkkuratProRegular.woff") format("woff");font-weight:normal;font-style:normal}
+        @font-face{font-family:"Akkurat Pro Italic";src:url("https://media.soc.northwestern.edu/common/fonts/AkkuratProItalic.woff") format("woff");font-weight:normal;font-style:normal}
+        @font-face{font-family:"Akkurat Pro Bold";src:url("https://media.soc.northwestern.edu/common/fonts/AkkuratProBold.woff") format("woff");font-weight:normal;font-style:normal}
+        @font-face{font-family:"Akkurat Pro Bold Italic";src:url("https://media.soc.northwestern.edu/common/fonts/AkkuratProBoldItalic.woff") format("woff");font-weight:normal;font-style:normal}
+        @font-face{font-family:"Campton Book";src:url("https://media.soc.northwestern.edu/common/fonts/CamptonBook.woff") format("woff");font-weight:normal;font-style:normal}
+        @font-face{font-family:"Campton Bold";src:url("https://media.soc.northwestern.edu/common/fonts/CamptonBold.woff") format("woff");font-weight:normal;font-style:normal}
+        @font-face{font-family:"Campton Extra Bold";src:url("https://media.soc.northwestern.edu/common/fonts/CamptonExtraBold.woff") format("woff");font-weight:normal;font-style:normal}
+        @font-face{font-family:"Campton Extra Light";src:url("https://media.soc.northwestern.edu/common/fonts/CamptonExtraLight.woff") format("woff");font-weight:normal;font-style:normal}
+    </style>
 
 
 </head>
