@@ -11,6 +11,15 @@
 
     <!-- Preloads   -->
     <link rel="preload" href="<?php echo get_stylesheet_directory_uri(); ?>/fonts.css" as="style">
+    <link rel="preload" href="https://media.soc.northwestern.edu/common/fonts/AkkuratProLight.woff" as="font">
+    <link rel="preload" href="https://media.soc.northwestern.edu/common/fonts/AkkuratProLightItalic.woff" as="font" type="">
+    <link rel="preload" href="https://media.soc.northwestern.edu/common/fonts/AkkuratProItalic.woff" as="font">
+    <link rel="preload" href="https://media.soc.northwestern.edu/common/fonts/AkkuratProBold.woff" as="font">
+    <link rel="preload" href="https://media.soc.northwestern.edu/common/fonts/AkkuratProBoldItalic.woff" as="font">
+    <link rel="preload" href="https://media.soc.northwestern.edu/common/fonts/CamptonBook.woff" as="font">
+    <link rel="preload" href="https://media.soc.northwestern.edu/common/fonts/CamptonBook.woff" as="font">
+    <link rel="preload" href="https://media.soc.northwestern.edu/common/fonts/CamptonExtraBold.woff" as="font">
+    <link rel="preload" href="https://media.soc.northwestern.edu/common/fonts/CamptonExtraLight.woff" as="font">
 
     <meta charset="utf-8">
 
