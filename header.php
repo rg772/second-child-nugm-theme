@@ -10,8 +10,7 @@
 <head itemref="footer-publisher-info searchform">
 
     <!-- Preloads   -->
-    <link rel="preload" href="<?php echo get_stylesheet_directory_uri(); ?>/fonts.css" as="style">
-    <link rel="preload" href="https://media.soc.northwestern.edu/common/fonts/AkkuratProLight.woff" as="font crossorigin="anonymous"">
+    <link rel="preload" href="https://media.soc.northwestern.edu/common/fonts/AkkuratProLight.woff" as="font crossorigin="anonymous">
     <link rel="preload" href="https://media.soc.northwestern.edu/common/fonts/AkkuratProLightItalic.woff" as="font"  crossorigin="anonymous">
     <link rel="preload" href="https://media.soc.northwestern.edu/common/fonts/AkkuratProItalic.woff" as="font" crossorigin="anonymous">
     <link rel="preload" href="https://media.soc.northwestern.edu/common/fonts/AkkuratProBold.woff" as="font" crossorigin="anonymous">
