@@ -15,10 +15,21 @@
     <link rel="preload" href="https://media.soc.northwestern.edu/common/fonts/AkkuratProItalic.woff" as="font" crossorigin="anonymous">
     <link rel="preload" href="https://media.soc.northwestern.edu/common/fonts/AkkuratProBold.woff" as="font" crossorigin="anonymous">
     <link rel="preload" href="https://media.soc.northwestern.edu/common/fonts/AkkuratProBoldItalic.woff" as="font" crossorigin="anonymous">
+   
+    <!--
     <link rel="preload" href="https://media.soc.northwestern.edu/common/fonts/CamptonBook.woff" as="font" crossorigin="anonymous">
     <link rel="preload" href="https://media.soc.northwestern.edu/common/fonts/CamptonBook.woff" as="font" crossorigin="anonymous">
     <link rel="preload" href="https://media.soc.northwestern.edu/common/fonts/CamptonExtraBold.woff" as="font" crossorigin="anonymous">
     <link rel="preload" href="https://media.soc.northwestern.edu/common/fonts/CamptonExtraLight.woff" as="font" crossorigin="anonymous">
+    -->
+
+    
+    <!-- 
+    Poppins switch over
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
     <meta charset="utf-8">
 
@@ -57,10 +68,12 @@
         @font-face{font-family:"Akkurat Pro Italic";src:url("https://media.soc.northwestern.edu/common/fonts/AkkuratProItalic.woff") format("woff");font-weight:normal;font-style:normal}
         @font-face{font-family:"Akkurat Pro Bold";src:url("https://media.soc.northwestern.edu/common/fonts/AkkuratProBold.woff") format("woff");font-weight:normal;font-style:normal}
         @font-face{font-family:"Akkurat Pro Bold Italic";src:url("https://media.soc.northwestern.edu/common/fonts/AkkuratProBoldItalic.woff") format("woff");font-weight:normal;font-style:normal}
-        @font-face{font-family:"Campton Book";src:url("https://media.soc.northwestern.edu/common/fonts/CamptonBook.woff") format("woff");font-weight:normal;font-style:normal}
+        /* 
+        @font-face{font-family:"Poppins";src:url("https://media.soc.northwestern.edu/common/fonts/CamptonBook.woff") format("woff");font-weight:normal;font-style:normal}
         @font-face{font-family:"Campton Bold";src:url("https://media.soc.northwestern.edu/common/fonts/CamptonBold.woff") format("woff");font-weight:normal;font-style:normal}
         @font-face{font-family:"Campton Extra Bold";src:url("https://media.soc.northwestern.edu/common/fonts/CamptonExtraBold.woff") format("woff");font-weight:normal;font-style:normal}
-        @font-face{font-family:"Campton Extra Light";src:url("https://media.soc.northwestern.edu/common/fonts/CamptonExtraLight.woff") format("woff");font-weight:normal;font-style:normal}
+        @font-face{font-family:"Campton Extra Light";src:url("https://media.soc.northwestern.edu/common/fonts/CamptonExtraLight.woff") format("woff");font-weight:normal;font-style:normal} 
+        */
     </style>
 
 
