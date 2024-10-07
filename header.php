@@ -22,7 +22,24 @@
     <link rel="preload" href="https://media.soc.northwestern.edu/common/fonts/CamptonExtraBold.woff" as="font" crossorigin="anonymous">
     <link rel="preload" href="https://media.soc.northwestern.edu/common/fonts/CamptonExtraLight.woff" as="font" crossorigin="anonymous">
     -->
-
+    <link rel=“preload” href=“https://media.soc.northwestern.edu/common/fonts/Poppins/Poppins-Black.woff2” as=“font” crossorigin=“anonymous”>
+    <link rel=“preload” href=“https://media.soc.northwestern.edu/common/fonts/Poppins/Poppins-BlackItalic.woff2” as=“font” crossorigin=“anonymous”>
+    <link rel=“preload” href=“https://media.soc.northwestern.edu/common/fonts/Poppins/Poppins-Bold.woff2” as=“font” crossorigin=“anonymous”>
+    <link rel=“preload” href=“https://media.soc.northwestern.edu/common/fonts/Poppins/Poppins-BoldItalic.woff2” as=“font” crossorigin=“anonymous”>
+    <link rel=“preload” href=“https://media.soc.northwestern.edu/common/fonts/Poppins/Poppins-ExtraBold.woff2” as=“font” crossorigin=“anonymous”>
+    <link rel=“preload” href=“https://media.soc.northwestern.edu/common/fonts/Poppins/Poppins-ExtraBoldItalic.woff2” as=“font” crossorigin=“anonymous”>
+    <link rel=“preload” href=“https://media.soc.northwestern.edu/common/fonts/Poppins/Poppins-ExtraLight.woff2” as=“font” crossorigin=“anonymous”>
+    <link rel=“preload” href=“https://media.soc.northwestern.edu/common/fonts/Poppins/Poppins-ExtraLightItalic.woff2” as=“font” crossorigin=“anonymous”>
+    <link rel=“preload” href=“https://media.soc.northwestern.edu/common/fonts/Poppins/Poppins-Italic.woff2” as=“font” crossorigin=“anonymous”>
+    <link rel=“preload” href=“https://media.soc.northwestern.edu/common/fonts/Poppins/Poppins-Light.woff2” as=“font” crossorigin=“anonymous”>
+    <link rel=“preload” href=“https://media.soc.northwestern.edu/common/fonts/Poppins/Poppins-LightItalic.woff2” as=“font” crossorigin=“anonymous”>
+    <link rel=“preload” href=“https://media.soc.northwestern.edu/common/fonts/Poppins/Poppins-Medium.woff2” as=“font” crossorigin=“anonymous”>
+    <link rel=“preload” href=“https://media.soc.northwestern.edu/common/fonts/Poppins/Poppins-MediumItalic.woff2” as=“font” crossorigin=“anonymous”>
+    <link rel=“preload” href=“https://media.soc.northwestern.edu/common/fonts/Poppins/Poppins-Regular.woff2” as=“font” crossorigin=“anonymous”>
+    <link rel=“preload” href=“https://media.soc.northwestern.edu/common/fonts/Poppins/Poppins-SemiBold.woff2” as=“font” crossorigin=“anonymous”>
+    <link rel=“preload” href=“https://media.soc.northwestern.edu/common/fonts/Poppins/Poppins-SemiBoldItalic.woff2” as=“font” crossorigin=“anonymous”>
+    <link rel=“preload” href=“https://media.soc.northwestern.edu/common/fonts/Poppins/Poppins-Thin.woff2” as=“font” crossorigin=“anonymous”>
+    <link rel=“preload” href=“https://media.soc.northwestern.edu/common/fonts/Poppins/Poppins-ThinItalic.woff2” as=“font” crossorigin=“anonymous”>
     
     <!-- 
     Poppins switch over
@@ -68,13 +85,30 @@
         @font-face{font-family:"Akkurat Pro Italic";src:url("https://media.soc.northwestern.edu/common/fonts/AkkuratProItalic.woff") format("woff");font-weight:normal;font-style:normal}
         @font-face{font-family:"Akkurat Pro Bold";src:url("https://media.soc.northwestern.edu/common/fonts/AkkuratProBold.woff") format("woff");font-weight:normal;font-style:normal}
         @font-face{font-family:"Akkurat Pro Bold Italic";src:url("https://media.soc.northwestern.edu/common/fonts/AkkuratProBoldItalic.woff") format("woff");font-weight:normal;font-style:normal}
-        /* 
-        @font-face{font-family:"Poppins";src:url("https://media.soc.northwestern.edu/common/fonts/CamptonBook.woff") format("woff");font-weight:normal;font-style:normal}
-        @font-face{font-family:"Campton Bold";src:url("https://media.soc.northwestern.edu/common/fonts/CamptonBold.woff") format("woff");font-weight:normal;font-style:normal}
-        @font-face{font-family:"Campton Extra Bold";src:url("https://media.soc.northwestern.edu/common/fonts/CamptonExtraBold.woff") format("woff");font-weight:normal;font-style:normal}
-        @font-face{font-family:"Campton Extra Light";src:url("https://media.soc.northwestern.edu/common/fonts/CamptonExtraLight.woff") format("woff");font-weight:normal;font-style:normal} 
-        */
+      
+
+        @font-face { font-family: “Poppins Black”; src: url(“https://media.soc.northwestern.edu/common/fonts/Poppins/Poppins-Black.woff2”) format(“woff2”); font-weight: normal; font-style: normal; }
+        @font-face { font-family: “Poppins Black Italic”; src: url(“https://media.soc.northwestern.edu/common/fonts/Poppins/Poppins-BlackItalic.woff2”) format(“woff2”); font-weight: normal; font-style: italic; }
+        @font-face { font-family: “Poppins Bold”; src: url(“https://media.soc.northwestern.edu/common/fonts/Poppins/Poppins-Bold.woff2”) format(“woff2”); font-weight: bold; font-style: normal; }
+        @font-face { font-family: “Poppins Bold Italic”; src: url(“https://media.soc.northwestern.edu/common/fonts/Poppins/Poppins-BoldItalic.woff2”) format(“woff2”); font-weight: bold; font-style: italic; }
+        @font-face { font-family: “Poppins ExtraBold”; src: url(“https://media.soc.northwestern.edu/common/fonts/Poppins/Poppins-ExtraBold.woff2”) format(“woff2”); font-weight: 800; font-style: normal; }
+        @font-face { font-family: “Poppins ExtraBold Italic”; src: url(“https://media.soc.northwestern.edu/common/fonts/Poppins/Poppins-ExtraBoldItalic.woff2”) format(“woff2”); font-weight: 800; font-style: italic; }
+        @font-face { font-family: “Poppins ExtraLight”; src: url(“https://media.soc.northwestern.edu/common/fonts/Poppins/Poppins-ExtraLight.woff2”) format(“woff2”); font-weight: 200; font-style: normal; }
+        @font-face { font-family: “Poppins ExtraLight Italic”; src: url(“https://media.soc.northwestern.edu/common/fonts/Poppins/Poppins-ExtraLightItalic.woff2”) format(“woff2”); font-weight: 200; font-style: italic; }
+        @font-face { font-family: “Poppins Italic”; src: url(“https://media.soc.northwestern.edu/common/fonts/Poppins/Poppins-Italic.woff2”) format(“woff2”); font-weight: normal; font-style: italic; }
+        @font-face { font-family: “Poppins Light”; src: url(“https://media.soc.northwestern.edu/common/fonts/Poppins/Poppins-Light.woff2”) format(“woff2”); font-weight: 300; font-style: normal; }
+        @font-face { font-family: “Poppins Light Italic”; src: url(“https://media.soc.northwestern.edu/common/fonts/Poppins/Poppins-LightItalic.woff2”) format(“woff2”); font-weight: 300; font-style: italic; }
+        @font-face { font-family: “Poppins Medium”; src: url(“https://media.soc.northwestern.edu/common/fonts/Poppins/Poppins-Medium.woff2”) format(“woff2”); font-weight: 500; font-style: normal; }
+        @font-face { font-family: “Poppins Medium Italic”; src: url(“https://media.soc.northwestern.edu/common/fonts/Poppins/Poppins-MediumItalic.woff2”) format(“woff2”); font-weight: 500; font-style: italic; }
+        @font-face { font-family: “Poppins Regular”; src: url(“https://media.soc.northwestern.edu/common/fonts/Poppins/Poppins-Regular.woff2”) format(“woff2”); font-weight: normal; font-style: normal; }
+        @font-face { font-family: “Poppins SemiBold”; src: url(“https://media.soc.northwestern.edu/common/fonts/Poppins/Poppins-SemiBold.woff2”) format(“woff2”); font-weight: 600; font-style: normal; }
+        @font-face { font-family: “Poppins SemiBold Italic”; src: url(“https://media.soc.northwestern.edu/common/fonts/Poppins/Poppins-SemiBoldItalic.woff2”) format(“woff2”); font-weight: 600; font-style: italic; }
+        @font-face { font-family: “Poppins Thin”; src: url(“https://media.soc.northwestern.edu/common/fonts/Poppins/Poppins-Thin.woff2”) format(“woff2”); font-weight: 100; font-style: normal; }
+        @font-face { font-family: “Poppins Thin Italic”; src: url(“https://media.soc.northwestern.edu/common/fonts/Poppins/Poppins-ThinItalic.woff2”) format(“woff2”); font-weight: 100; font-style: italic; }
     </style>
+
+
+
 
 
 </head>
